@@ -7,6 +7,11 @@ Descrizione tecnica del mio laboratorio di monitoraggio e difesa cyber. Architet
 - **SIEM:** Wazuh (Ubuntu Server 22.04 VM) - *In fase di implementazione*
 - **Monitoring:** Microsoft Sysmon + Wireshark.
 
+### Legacy Hardware Integration
+- **Asset:** Laptop HP (Circa 2010) - Resuscitato con SSD Upgrade & Thermal Repasting.
+- **Ruolo:** Server SIEM Dedicato (Bare Metal) su Ubuntu Server LTS.
+- **Obbiettivo:** Off-loading dei compiti di monitoraggio dalla workstation principale e creazione di una console di controllo dedicata.
+
 ## Networking & Connettività Sicura
 - **Implementazione Rete in Cascata:** Configurazione di un'architettura a doppio router per creare una zona di rete sicura.
 - **Segmentazione e Isolamento (VLAN/Guest):** Reti isolate per dispositivi IoT/Guest (Zero Trust).
@@ -17,3 +22,4 @@ Descrizione tecnica del mio laboratorio di monitoraggio e difesa cyber. Architet
 [Wazuh Dashboard](https://github.com/amann-studio/SOC-Defense-Lab/blob/main/image.png)
 
 "Configurazione di una pipeline di telemetria completa: Sysmon (Endpoint) -> Wazuh Agent -> Wazuh Manager (SIEM). Capacità di analisi granulare dei log tramite archives.json per il tracking di esecuzioni di processi (EventID 1) e command-line auditing."
+
