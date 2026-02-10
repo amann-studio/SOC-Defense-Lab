@@ -12,3 +12,6 @@ Descrizione tecnica del mio laboratorio di monitoraggio e difesa cyber. Architet
 - **Segmentazione e Isolamento (VLAN/Guest):** Reti isolate per dispositivi IoT/Guest (Zero Trust).
 - **Overlay Network (SD-WAN):** Implementazione ZeroTier per accesso remoto sicuro.
 - **Privacy DNS:** Configurazione DNS over HTTPS (DoH) e DNS over TLS (DoT).
+
+## Monitoring 
+"Configurazione di una pipeline di telemetria completa: Sysmon (Endpoint) -> Wazuh Agent -> Wazuh Manager (SIEM). Capacità di analisi granulare dei log tramite archives.json per il tracking di esecuzioni di processi (EventID 1) e command-line auditing."
