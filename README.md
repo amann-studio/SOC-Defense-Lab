@@ -14,4 +14,6 @@ Descrizione tecnica del mio laboratorio di monitoraggio e difesa cyber. Architet
 - **Privacy DNS:** Configurazione DNS over HTTPS (DoH) e DNS over TLS (DoT).
 
 ## Monitoring 
+[Wazuh Dashboard](percorso/della/tua/immagine.png)
+
 "Configurazione di una pipeline di telemetria completa: Sysmon (Endpoint) -> Wazuh Agent -> Wazuh Manager (SIEM). Capacità di analisi granulare dei log tramite archives.json per il tracking di esecuzioni di processi (EventID 1) e command-line auditing."
