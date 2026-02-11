@@ -8,9 +8,19 @@ Descrizione tecnica del mio laboratorio di monitoraggio e difesa cyber. Architet
 - **Monitoring:** Microsoft Sysmon + Wireshark.
 
 ### Legacy Hardware Integration
-- **Asset:** Laptop HP (Circa 2010) - Resuscitato con SSD Upgrade & Thermal Repasting.
+- **Asset Recovery:** Recupero funzionale di un notebook legacy (HP Pavilion dv6 - 2010) tramite manutenzione hardware straordinaria (Thermal Repasting con Arctic MX-4 e upgrade SSD SATA).Installazione nativa di Ubuntu Server 22.04 LTS, eliminando l'overhead della virtualizzazione e ottimizzando le prestazioni su hardware datato.
 - **Ruolo:** Server SIEM Dedicato (Bare Metal) su Ubuntu Server LTS.
 - **Obbiettivo:** Off-loading dei compiti di monitoraggio dalla workstation principale e creazione di una console di controllo dedicata.
+
+## SIEM Infrastructure Migration
+- **Manager Migration:** Trasferimento del Wazuh Manager da ambiente virtuale (VMware) a server fisico dedicato.
+- **Resource Off-loading:** Recupero di 6GB di RAM e 4 vCPU sulla workstation principale, migliorando la stabilità complessiva del laboratorio durante le fasi di attacco simulato.
+- **Persistence Tuning:** Configurazione dei parametri di sistema (logind.conf) per garantire l'operatività del server "Headless" anche con coperchio chiuso (ignore lid switch).
+
+## SOC Operational Cockpit
+- **Multi-Monitor Monitoring:** Implementazione di una postazione di controllo dedicata sfruttando una GPU RTX 4060Ti per gestire un monitor secondario da 13" dedicato esclusivamente alla telemetria.
+- **Terminal Multiplexing:** Utilizzo di tmux per il monitoraggio simultaneo dei log in tempo reale (alerts.json) e l'amministrazione remota via SSH.
+- **Log Filtering:** Implementazione di filtri via CLI (grep -v "keepalive") per la pulizia del rumore di fondo e la visualizzazione focalizzata sugli eventi di sicurezza critici.
 
 ## Networking & Connettività Sicura
 - **Implementazione Rete in Cascata:** Configurazione di un'architettura a doppio router per creare una zona di rete sicura.
@@ -23,3 +33,6 @@ Descrizione tecnica del mio laboratorio di monitoraggio e difesa cyber. Architet
 
 "Configurazione di una pipeline di telemetria completa: Sysmon (Endpoint) -> Wazuh Agent -> Wazuh Manager (SIEM). Capacità di analisi granulare dei log tramite archives.json per il tracking di esecuzioni di processi (EventID 1) e command-line auditing."
 
+## Vulnerability Management & Remediation
+- **SCA Analysis:** Identificazione di vulnerabilità critiche tramite il modulo Security Configuration Assessment di Wazuh (es. Weak Password Policy su account amministrativi).
+- **Remediation Cycle:** Applicazione del ciclo di vita dell'incidente: Detection (Wazuh) -> Analysis (SCA logs) -> Remediation (PowerShell net user hardening) -> Verification.
