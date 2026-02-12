@@ -36,3 +36,8 @@ Descrizione tecnica del mio laboratorio di monitoraggio e difesa cyber. Architet
 ## Vulnerability Management & Remediation
 - **SCA Analysis:** Identificazione di vulnerabilità critiche tramite il modulo Security Configuration Assessment di Wazuh (es. Weak Password Policy su account amministrativi).
 - **Remediation Cycle:** Applicazione del ciclo di vita dell'incidente: Detection (Wazuh) -> Analysis (SCA logs) -> Remediation (PowerShell net user hardening) -> Verification.
+
+### Attack & Detection Simulations
+- **Brute Force Attack (Credential Guessing):** Simulato attacco via SMB tramite `smbclient` e `Hydra` da Kali Linux.
+- **Detection:** Rilevamento riuscito tramite Wazuh Rule 60122 (Multiple logon failures) mappata su MITRE T1110.
+- **Advanced Telemetry:** Identificazione di processi critici di sistema tramite Sysmon (EventID 1), con rilevamento di tecniche di *Application Shimming* (T1546.011) tramite il processo `sdbinst.exe`.
