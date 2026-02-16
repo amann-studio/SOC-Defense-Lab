@@ -28,6 +28,15 @@ Descrizione tecnica del mio laboratorio di monitoraggio e difesa cyber. Architet
 - **Overlay Network (SD-WAN):** Implementazione ZeroTier per accesso remoto sicuro.
 - **Privacy DNS:** Configurazione DNS over HTTPS (DoH) e DNS over TLS (DoT).
 
+### Network Intrusion Detection (NIDS) Implementation
+- **Tool:** Suricata IDS (8.0.3 RELEASE)
+- **Deployment:** Installazione Bare Metal su server dedicato (HP .60).
+- **Hardening & Tuning:** 
+    - Ottimizzazione delle performance tramite disabilitazione dei log non critici (HTTP, DNS, Flow).
+    - Implementazione di filtri di soppressione per falsi positivi (Ethertype unknown, ICMP unknown code) tramite `threshold.config`.
+- **SIEM Integration:** Pipeline integrata per l'ingestione dei log JSON (`eve.json`) in Wazuh, permettendo la correlazione tra eventi di rete ed eventi endpoint.
+- **Test di Validazione:** Rilevamento riuscito della firma `GPL ATTACK_RESPONSE` (ID: 2100498) simulando un'esfiltrazione di privilegi.
+
 ## Monitoring 
 [Wazuh Dashboard](https://github.com/amann-studio/SOC-Defense-Lab/blob/main/image.png)
 
