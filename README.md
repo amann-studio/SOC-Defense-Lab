@@ -41,3 +41,14 @@ Descrizione tecnica del mio laboratorio di monitoraggio e difesa cyber. Architet
 - **Brute Force Attack (Credential Guessing):** Simulato attacco via SMB tramite `smbclient` e `Hydra` da Kali Linux.
 - **Detection:** Rilevamento riuscito tramite Wazuh Rule 60122 (Multiple logon failures) mappata su MITRE T1110.
 - **Advanced Telemetry:** Identificazione di processi critici di sistema tramite Sysmon (EventID 1), con rilevamento di tecniche di *Application Shimming* (T1546.011) tramite il processo `sdbinst.exe`.
+
+###  Active Response & Automated Defense
+Ho implementato una logica di difesa attiva per mitigare attacchi di tipo Brute Force in tempo reale.
+
+- **Trigger Rule:** `60122` (Multiple Windows logon failures).
+- **Action:** Esecuzione automatica di `netsh.exe` sull'endpoint per il ban temporaneo dell'IP sorgente nel Firewall di Windows (10 minuti).
+- **Log Evidence (Internal Protection Test):**
+  Durante i test di stress locali, il sistema ha correttamente identificato i fallimenti di login, attivando il modulo di risposta.
+  Il log seguente dimostra la capacità del SIEM di distinguere tra attacchi esterni e attività locale:
+
+  [Visualizza log](./logs/active-response-demo.json)
