@@ -49,6 +49,14 @@ Ho implementato una logica di difesa attiva per mitigare attacchi di tipo Brute 
 - **Action:** Esecuzione automatica di `netsh.exe` sull'endpoint per il ban temporaneo dell'IP sorgente nel Firewall di Windows (10 minuti).
 - **Log Evidence (Internal Protection Test):**
   Durante i test di stress locali, il sistema ha correttamente identificato i fallimenti di login, attivando il modulo di risposta.
-  Il log seguente dimostra la capacità del SIEM di distinguere tra attacchi esterni e attività locale:
+
+```json
+  "program": "active-response/bin/netsh.exe",
+  "command": "check_keys",
+  "parameters": {"keys": ["::1"]},
+  "status": "Aborted"
+```
+
+Il log seguente dimostra la capacità del SIEM di distinguere tra attacchi esterni e attività locale:
 
   [Visualizza log](./logs/active-response-demo.json)
