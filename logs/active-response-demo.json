@@ -1,5 +1,0 @@
- ```json
-  "program": "active-response/bin/netsh.exe",
-  "command": "check_keys",
-  "parameters": {"keys": ["::1"]},
-  "status": "Aborted"
