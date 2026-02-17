@@ -1,4 +1,3 @@
-- soc-cleaner.sh
 
 #!/bin/bash
 # Pulizia Log Suricata (file compressi vecchi di 7 giorni)
