@@ -69,3 +69,46 @@ Ho implementato una logica di difesa attiva per mitigare attacchi di tipo Brute 
 Il log seguente dimostra la capacità del SIEM di distinguere tra attacchi esterni e attività locale:
 
   [Visualizza log](./logs/active-response-demo.json)
+
+---
+
+# **Maintenance & Sustainability**).
+
+## Network Visibility & Maintenance
+
+## Business Continuity & Failover Strategy
+
+Per garantire l'operatività del laboratorio anche in caso di guasto della linea fissa (ISP), è stato implementato un piano di **Disaster Recovery**.
+
+### Failover Node: Cudy LT700E (LTE)
+In caso di interruzione della connettività primaria, il laboratorio si affida a un gateway 4G/LTE dedicato.
+
+*   **Configurazione LTE:** Tuning APN (`apn.fastweb.it`) e Roaming attivo.
+*   **MTU Optimization:** Impostato a `1420` byte per prevenire la frammentazione dei pacchetti su rete mobile.
+*   **IP Management:** Sottorete isolata (`192.168.20.1`) per prevenire conflitti IP durante lo switchover.
+*   **Radio Silence:** Moduli Wi-Fi disattivati per ridurre la superficie d'attacco e le interferenze.
+
+### Disaster Recovery Protocol (Manual Swap)
+1.  **Rilevamento:** Perdita di segnale (LoS) sulla WAN primaria.
+2.  **Attivazione:** Iniezione del gateway LTE sulla porta WAN del router Core (WR3000H).
+3.  **Ripristino:** Grazie alla configurazione Dynamic IP della WAN del router Core, l'intera rete (Switch, Server, Desktop) riprende la navigazione in < 60 secondi senza necessità di riconfigurare i client o i tunnel VPN ZeroTier.
+
+### Network Visibility (The SPAN Breakthrough)
+*   **Hardware:** Implementato Switch Managed TP-Link TL-SG605E.
+*   **Configurazione:**
+    *   Management IP: `192.168.10.250` (Statico).
+    *   **Port Mirroring (SPAN):** Configurato per monitorare il traffico "North-South" del Desktop Windows.
+    *   **Source:** Port 2 (Desktop Andrea) - Ingress/Egress enabled.
+    *   **Destination:** Port 5 (Server HP).
+*   **Validazione:** Verificato flusso pacchetti tramite `tcpdump` e trigger di alert Suricata (ET INFO Windows Powershell User-Agent) visualizzati correttamente sulla dashboard Wazuh con IP sorgente del client remoto.
+
+### Storage & Log Retention (SSD Hardening)
+*   **Problema:** SSD da 128GB a rischio saturazione per via dei log JSON di Suricata e degli archivi di Wazuh.
+*   **Soluzione:** Implementata una **Log Retention Policy** di 7 giorni.
+*   **Automazione:**
+    *   Creato script [soc-cleaner.sh](./scripts/soc-cleaner.sh)`soc-cleaner.sh` in `/usr/local/bin/` che esegue il cleanup chirurgico dei file compressi (`.gz`) e il troncamento dei log sovradimensionati.
+    *   Pianificato **Cronjob** notturno (`0 3 * * *`) per l'esecuzione automatica dello script come utente root.
+
+### Drivers & Services
+*   **Promiscuous Mode:** Resa persistente tramite Unit File di systemd (`promisc-nic.service`) per garantire che Suricata sia operativo immediatamente dopo ogni reboot senza intervento manuale.
+
