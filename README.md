@@ -106,7 +106,7 @@ In caso di interruzione della connettività primaria, il laboratorio si affida a
 *   **Problema:** SSD da 128GB a rischio saturazione per via dei log JSON di Suricata e degli archivi di Wazuh.
 *   **Soluzione:** Implementata una **Log Retention Policy** di 7 giorni.
 *   **Automazione:**
-    *   Creato script [soc-cleaner.sh](./scripts/soc-cleaner.sh)`soc-cleaner.sh` in `/usr/local/bin/` che esegue il cleanup chirurgico dei file compressi (`.gz`) e il troncamento dei log sovradimensionati.
+    *   Creato script [soc-cleaner.sh](./scripts/soc-cleaner.sh) in `/usr/local/bin/` che esegue il cleanup chirurgico dei file compressi (`.gz`) e il troncamento dei log sovradimensionati.
     *   Pianificato **Cronjob** notturno (`0 3 * * *`) per l'esecuzione automatica dello script come utente root.
 
 ### Drivers & Services
