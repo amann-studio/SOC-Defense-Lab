@@ -112,3 +112,24 @@ In caso di interruzione della connettività primaria, il laboratorio si affida a
 ### Drivers & Services
 *   **Promiscuous Mode:** Resa persistente tramite Unit File di systemd (`promisc-nic.service`) per garantire che Suricata sia operativo immediatamente dopo ogni reboot senza intervento manuale.
 
+---
+
+## Real-World Case Study: .NET Core Web App Assessment
+Conduzione di un'attività di Vulnerability Assessment pro-bono su un'applicazione gestionale reale in ambiente di staging (.NET Core / MSSQL).
+### Identificazione e Sfruttamento di Falle Critiche
+*  **BOLA / IDOR (Broken Object Level Authorization):**
+    *    Finding: Individuata la possibilità di esfiltrare dati PII (Nomi, Codici Fiscali, Dati Finanziari) di altri tenant modificando parametri numerici sequenziali (idPalestra, idSocio) negli endpoint di reportistica.
+    *    Impatto: Rischio massivo di Data Breach e violazione GDPR.
+*  **Stored XSS (Cross-Site Scripting Persistente):**
+    *    Finding: Identificata mancanza di sanitizzazione nel modulo anagrafica.
+    *    Esecuzione: Effettuato bypass dei filtri moderni (AJAX/DOM) tramite Event Handler Injection (<img src=x onerror=...>), ottenendo l'esecuzione di codice JavaScript arbitrario persistente nel database.
+### API & JWT Security Analysis
+* **JWT Inspection:** Decodifica e analisi dei Claims nel token di sessione. Rilevata esposizione di ID sensibili nel payload e utilizzo di configurazioni di default (issuer: yourapp).
+* **Authorization Bypass Testing:** Test di manipolazione del token (Algoritmo None, Signature tampering) per verificare la robustezza del middleware di autenticazione di .NET Core.
+* **API Interception:** Utilizzo combinato di Postman (costruzione richieste) e Burp Suite (analisi pacchetti) per mappare la logica del backend e i flussi di dati JSON.
+### Infrastructure Hardening & Information Disclosure
+* **Verbose Error Analysis:** Rilevata esposizione di metadati tecnici (Request ID, ASP.NET Core framework confirmation) in risposte 500 Internal Server Error.
+* **Security Headers:** Identificata assenza di policy critiche come Content-Security-Policy e X-Frame-Options (Clickjacking protection) su 23 endpoint differenti.
+### Vulnerability Management Cycle (Remediation)
+* **Collaborazione Tecnica:** Fornito report dettagliato allo sviluppatore con indicazioni specifiche per la mitigazione (Parametric Queries, Output Encoding, Server-side authorization checks).
+* **Verifica:** Conduzione di sessioni di Re-testing post-fix per confermare la corretta chiusura delle falle identificate.
