@@ -13,6 +13,13 @@ Il monitoraggio è garantito tramite **Port Mirroring** sullo switch TP-Link:
 *   **Destination:** Porta 5 (HP Server).
 *   Suricata opera in **Promiscuous Mode** sull'interfaccia `enp3s0` per analizzare il traffico specchiato.
 
+### Configurazione Interfaccia (Promiscuous Mode)
+Per consentire a Suricata di analizzare il traffico specchiato dallo switch (SPAN), l'interfaccia di rete del server (`enp3s0`) è stata configurata in **Modalità Promiscua**. 
+
+*   **Comando utilizzato:** `sudo ip link set enp3s0 promisc on`
+*   **Perché:** Normalmente una scheda di rete scarta i pacchetti non indirizzati al proprio MAC address. La modalità promiscua forza la scheda a "leggere" tutto il traffico che transita sul cavo, permettendo al NIDS di monitorare l'intera sottorete senza interferire con la navigazione degli host.
+*   **Persistenza:** Configurato tramite servizio `systemd` per garantire l'attivazione automatica al boot.
+
 ## Business Continuity (Failover)
 È implementato un sistema di ridondanza WAN tramite il router LTE **Cudy LT700E**.
 *   **Protocollo:** Manual Failover (Cold Standby).
