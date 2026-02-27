@@ -14,7 +14,13 @@ La selezione dei software segue il principio di "Minima Superficie d'Attacco", p
 *   **OpenVPN:** Connettività verso laboratori esterni (TryHackMe).
 *   **NetMonster (Android):** Analisi delle bande 4G/5G e segnale radio.
 
-## Pentesting & Research (Kali WSL2)
+## Vulnerability Research & Application Testing
+*   **Burp Suite Professional:** Intercettazione e manipolazione traffico HTTP/S, utilizzo del Decoder locale per analisi Token JWT e Base64.
+*   **OWASP ZAP (ZAPROXY):** DAST (Dynamic Application Security Testing) per scansioni di vulnerabilità automatizzate e analisi degli header di sicurezza.
+*   **Postman:** Testing metodico di endpoint API, crafting di richieste personalizzate e analisi delle risposte JSON.
+*   **Kali Linux (WSL2):** Ambiente operativo per test di penetrazione e ricognizione.
+
+## OSINT, Reconnaissance & Environment Labs
 *   **Win-KeX:** Interfaccia grafica per ambiente Kali Linux su Windows.
 *   **Subfinder & Httpx:** Reconnaissance e analisi di sottodomini.
 *   **GameShell:** Training environment per CLI Linux.
@@ -31,3 +37,18 @@ La selezione dei software segue il principio di "Minima Superficie d'Attacco", p
 *   **Canvas Fingerprint Defender:** Mitigazione del tracciamento browser.
 *   **Greenshot:** Documentazione rapida di incidenti e configurazioni.
 *   **G-Helper:** Alternativa leggera al bloatware ASUS per il controllo hardware.
+
+---
+
+## Operational Tuning & Noise Reduction 
+Un sistema di monitoraggio non calibrato genera "Alert Fatigue". Ho implementato le seguenti ottimizzazioni per focalizzare l'analisi sulle minacce reali:
+
+### Wazuh Tuning
+*   **Rootcheck Exclusion (Alert 510):** Whitelist dell'interfaccia di rete in modalità promiscua per eliminare i falsi positivi legati all'attività legittima dell'IDS.
+*   **Active Response (Rule 60122):** Calibrazione del blocco automatico IP tramite `netsh` per prevenire attacchi Brute Force SMB/RDP.
+
+### Suricata Tuning
+*   **Signature Suppression (`threshold.config`):**
+    *   **SID 2200121:** Silenziamento alert relativi a Ethertype non riconosciuti.
+    *   **SID 2200025:** Soppressione rumore ICMP in contesti di rete locale sicura.
+*   **Logging Hardening:** Disabilitazione dei log ridondanti (DNS, TLS, Flow) nel file `eve.json` per ridurre l'I/O su disco del 90% e preservare l'hardware legacy.
