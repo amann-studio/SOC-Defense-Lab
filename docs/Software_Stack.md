@@ -17,7 +17,7 @@ La selezione dei software segue il principio di "Minima Superficie d'Attacco", p
 ## Vulnerability Research & Application Testing
 *   **Burp Suite Professional:** Intercettazione e manipolazione traffico HTTP/S, utilizzo del Decoder locale per analisi Token JWT e Base64.
 *   **OWASP ZAP (ZAPROXY):** DAST (Dynamic Application Security Testing) per scansioni di vulnerabilità automatizzate e analisi degli header di sicurezza.
-*   **Postman:** Testing metodico di endpoint API, crafting di richieste personalizzate e analisi delle risposte JSON.
+*   **Postman:** Testing di endpoint API, crafting di richieste personalizzate e analisi delle risposte JSON.
 *   **Kali Linux (WSL2):** Ambiente operativo per test di penetrazione e ricognizione.
 
 ## OSINT, Reconnaissance & Environment Labs
