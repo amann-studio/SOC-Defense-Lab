@@ -51,7 +51,7 @@ Un sistema di monitoraggio non calibrato genera "Alert Fatigue". Ho implementato
 *   **Rootcheck Exclusion (Alert 510):** Whitelist dell'interfaccia di rete in modalità promiscua per eliminare i falsi positivi legati all'attività legittima dell'IDS.
 *   **Active Response (Rule 60122):** Calibrazione del blocco automatico IP tramite `netsh` per prevenire attacchi Brute Force SMB/RDP.
 *   **Noise Reduction (Rule 100002 & 100003):** Silenziamento dei log legittimi di Sysmon generati dagli script di automazione e dei check di licenza Windows.
-*   **Rule 100004 (Detection Engineering):** Creata regola custom di Livello 12 (Critical) per intercettare l'Event ID 4656 (Audit Failure) e rilevare tentativi di accesso non autorizzato ai dischi protetti (Lateral Movement prevention).
+*   **Rule 100004 (Detection Engineering):** Creata regola custom di Livello 12 (Critical) per intercettare l'Event ID 4656 (Audit Failure) e rilevare tentativi di accesso non autorizzato ai dischi protetti (Lateral Movement prevention). [Wazuh Custom Alert Level 12](../Img/wazuh-custom-rule-12.png)
 
 ### Suricata Tuning
 *   **Signature Suppression (`threshold.config`):**
