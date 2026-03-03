@@ -20,6 +20,10 @@ La selezione dei software segue il principio di "Minima Superficie d'Attacco", p
 *   **Postman:** Testing di endpoint API, crafting di richieste personalizzate e analisi delle risposte JSON.
 *   **Kali Linux (WSL2):** Ambiente operativo per test di penetrazione e ricognizione.
 
+## Scripting & Automation
+*   **Python 3:** Sviluppo di script custom (es. `lab_monitor.py` tramite libreria `subprocess`) per il monitoraggio real-time dello stato degli asset di rete.
+*   **VS Code:** Ambiente di sviluppo integrato (IDE) configurato per il testing e il debugging degli script.
+
 ## OSINT, Reconnaissance & Environment Labs
 *   **Win-KeX:** Interfaccia grafica per ambiente Kali Linux su Windows.
 *   **Subfinder & Httpx:** Reconnaissance e analisi di sottodomini.
@@ -46,6 +50,8 @@ Un sistema di monitoraggio non calibrato genera "Alert Fatigue". Ho implementato
 ### Wazuh Tuning
 *   **Rootcheck Exclusion (Alert 510):** Whitelist dell'interfaccia di rete in modalità promiscua per eliminare i falsi positivi legati all'attività legittima dell'IDS.
 *   **Active Response (Rule 60122):** Calibrazione del blocco automatico IP tramite `netsh` per prevenire attacchi Brute Force SMB/RDP.
+*   **Noise Reduction (Rule 100002 & 100003):** Silenziamento dei log legittimi di Sysmon generati dagli script di automazione e dei check di licenza Windows.
+*   **Rule 100004 (Detection Engineering):** Creata regola custom di Livello 12 (Critical) per intercettare l'Event ID 4656 (Audit Failure) e rilevare tentativi di accesso non autorizzato ai dischi protetti (Lateral Movement prevention).
 
 ### Suricata Tuning
 *   **Signature Suppression (`threshold.config`):**
