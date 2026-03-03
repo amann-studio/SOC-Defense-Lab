@@ -24,6 +24,7 @@ Esplora le sezioni dettagliate per approfondire la configurazione:
 * **Active Response (Progetto Yamamoto):** Implementazione del blocco automatico degli IP malevoli tramite Wazuh + Netsh.
 * **Thermal & Resource Tuning:** Ottimizzazione del kernel Linux per stabilizzare il server HP (da 80°C a 49°C).
 * **FIM (File Integrity Monitoring):** Analisi in tempo reale delle modifiche ai file critici di sistema.
+* **Detection Engineering:** Creazione di regole custom su Wazuh (Livello 12) per il monitoraggio avanzato (Auditing) degli accessi negati a partizioni isolate.
 
 ### Red Team Ops
 * **[Case Study: Web App Assessment](./docs/Case_Study_Web_App.md):** Analisi reale di una applicazione .NET con scoperta di vulnerabilità **IDOR** e **Stored XSS**.
@@ -40,7 +41,7 @@ Esplora le sezioni dettagliate per approfondire la configurazione:
 ## Nota Personale
 Questo laboratorio non è solo una collezione di strumenti, ma il diario della mia transizione professionale verso la Cybersecurity. 
 
-Ho costruito questa infrastruttura partendo da zero, affrontando sfide reali come l'ottimizzazione termica di hardware legacy e la gestione di protocolli di rete complessi. Per accelerare il mio apprendimento e simulare un ambiente di lavoro moderno, ho utilizzato strumenti di **IA Generativa come Mentore Senior virtuale**, collaborando nella progettazione architettonica e nella stesura dei report tecnici. 
+Ho costruito questa infrastruttura partendo da zero, affrontando sfide reali come l'ottimizzazione termica di hardware legacy e la gestione di protocolli di rete complessi. Per accelerare il mio apprendimento e simulare un ambiente di lavoro moderno, ho utilizzato strumenti di IA Generativa come Mentore Senior virtuale, collaborando nella progettazione architettonica e nella stesura dei report tecnici. 
 
 Credo fermamente che l'onestà intellettuale e la capacità di padroneggiare gli strumenti di supporto tecnologico siano skill fondamentali per un analista nel 2026. 
 Ogni riga di codice, configurazione o vulnerabilità riportata in questo repository è stata da me testata, risolta e validata fisicamente nel laboratorio.
