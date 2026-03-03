@@ -21,7 +21,7 @@ La selezione dei software segue il principio di "Minima Superficie d'Attacco", p
 *   **Kali Linux (WSL2):** Ambiente operativo per test di penetrazione e ricognizione.
 
 ## Scripting & Automation
-*   **Python 3:** Sviluppo di script custom (es. `lab_monitor.py` tramite libreria `subprocess`) per il monitoraggio real-time dello stato degli asset di rete.
+*   **Python 3:** Sviluppo di script custom (es. `lab_monitor.py` tramite libreria `subprocess`) per il monitoraggio real-time dello stato degli asset di rete. [Python SOC Monitor](../Img/python-soc-monitor.png)
 *   **VS Code:** Ambiente di sviluppo integrato (IDE) configurato per il testing e il debugging degli script.
 
 ## OSINT, Reconnaissance & Environment Labs
