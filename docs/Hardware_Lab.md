@@ -26,6 +26,7 @@ L'infrastruttura del laboratorio è composta da hardware eterogeneo, ottimizzato
 *   **Storage:** SSD 128GB (Nuovo)
 *   **Manutenzione:** Pasta termica sostituita (Arctic MX-4), configurato per operatività Headless (Lid Switch Ignore).
 *   **Ruolo:** Server Ubuntu 22.04 LTS dedicato a Wazuh Manager e Suricata IDS.
+    *   **Access Control** (Hardening): Autenticazione via password disabilitata a livello Daemon SSH (sshd_config). Accesso remoto consentito esclusivamente tramite chiavi crittografiche RSA 4096 per mitigare attacchi brute-force.
 
 ## 4. Network Equipment
 *   **Edge Router:** Cudy WR3000H (Wi-Fi 6, Dual-Core CPU).
