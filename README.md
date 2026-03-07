@@ -15,7 +15,7 @@ Esplora le sezioni dettagliate per approfondire la configurazione:
 *  **[Hardware Lab Inventory](./docs/Hardware_Lab.md)**: Specifiche del Server SOC (HP), Desktop e Red Team Node (Asus).
 *  **[Software Stack](./docs/Software_Stack.md)**: Integrazione SIEM/XDR (Wazuh), IDS (Suricata) e Tool di Pentest.
 *  **[Automation & Maintenance](./scripts/soc-cleaner.sh)**: Script Bash per la gestione dei log e l'ottimizzazione delle risorse.
-
+*  **[Roadmap & Progressi](./docs/Roadmap.md)**: Pianificazione delle fasi di sviluppo del laboratorio e task futuri.
 ---
 
 ## Casi di Studio & Operazioni Pratiche
