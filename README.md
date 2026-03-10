@@ -1,7 +1,7 @@
 # SOC Defense & Pentest Lab
 **Un'infrastruttura reale di monitoraggio, hardening e analisi delle minacce.**
 
-![Architecture Diagram](./Img/Architecture.png)
+![Architecture Diagram](./Img/Architecture.png) 
 
 ## Obiettivo del Progetto
 Questo laboratorio simula un ambiente aziendale reale per l'applicazione pratica di concetti **Blue Team** (Difesa) e **Red Team** (Attacco). L'obiettivo principale è padroneggiare la visibilità di rete, la correlazione dei log e il monitoraggio degli endpoint.
@@ -21,7 +21,7 @@ Esplora le sezioni dettagliate per approfondire la configurazione:
 ## Casi di Studio & Operazioni Pratiche
 
 ### Blue Team Ops
-* **Active Response (Progetto Yamamoto):** Implementazione del blocco automatico degli IP malevoli tramite Wazuh + Netsh.
+* **Active Response (Progetto Yamamoto):** Implementazione del blocco automatico degli IP malevoli tramite Wazuh + Netsh. 
 * **Thermal & Resource Tuning:** Ottimizzazione del kernel Linux per stabilizzare il server HP (da 80°C a 49°C).
 * **FIM (File Integrity Monitoring):** Analisi in tempo reale delle modifiche ai file critici di sistema.
 * **Detection Engineering:** Creazione di regole custom su Wazuh (Livello 12) per il monitoraggio avanzato (Auditing) degli accessi negati a partizioni isolate.
