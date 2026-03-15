@@ -28,3 +28,18 @@ Il laboratorio è in costante evoluzione. Lo sviluppo è strutturato per macro-a
 - [ ] Studio e pratica su piattaforme enterprise (Splunk Basics / SPL).
 - [ ] Integrazione di "AI-Assisted Operations" (LLM applicati al Log Triage e incident response).
 - [ ] Implementazione di scansioni DAST automatizzate (OWASP ZAP) su target controllati.
+
+## Percorsi di Formazione & Certificazioni
+Qui tengo traccia del mio studio quotidiano.
+
+| Corso / Certificazione | Piattaforma | Status | Progresso |
+| :--- | :--- | :--- | :--- |
+| **Cybersecurity Technician** | Time Vision Srl | In corso | [=======>--] 70% |
+| **ISC2 CC (Certified in Cybersecurity)** | ISC2 | Candidato | [----------] 0% |
+| **Splunk: Basics** | TryHackMe | Da iniziare | [----------] 0% |
+| **DevSecOps Path** | TryHackMe | In corso | [==>-------] 15% |
+| **Cybersecurity Fundamentals** | IBM SkillsBuild | In corso | [===>------] 25% |
+| **Python Fundamentals** | NetworkChuck/Self | Completato | [==========] 100% |
+
+---
+*Legenda: [=] = 10% di completamento.*
