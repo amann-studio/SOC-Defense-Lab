@@ -36,6 +36,7 @@ Qui tengo traccia del mio studio quotidiano.
 | :--- | :--- | :--- | :--- |
 | **Cybersecurity Technician** | Time Vision Srl | In corso | [=======>--] 70% |
 | **ISC2 CC (Certified in Cybersecurity)** | ISC2 | Candidato | [----------] 0% |
+| **SOC Level 1 Path** | TryHackMe | In corso | [==>-------] 10% |
 | **Splunk: Basics** | TryHackMe | Da iniziare | [----------] 0% |
 | **DevSecOps Path** | TryHackMe | In corso | [==>-------] 15% |
 | **Cybersecurity Fundamentals** | IBM SkillsBuild | In corso | [===>------] 25% |
