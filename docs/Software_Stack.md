@@ -47,6 +47,7 @@ La selezione dei software segue il principio di "Minima Superficie d'Attacco", p
 
 ## Operational Tuning & Noise Reduction 
 Un sistema di monitoraggio non calibrato genera "Alert Fatigue". Ho implementato le seguenti ottimizzazioni per focalizzare l'analisi sulle minacce reali:
+Nota sull'Intelligence: L'integrazione con VirusTotal è stata configurata per limitare le chiamate API agli hash dei processi (Event ID 1), evitando l'invio di dati personali o documenti (es. .pdf, .docx) per garantire la privacy dei dati in linea con i principi di Data Minimization.
 
 ### Wazuh Tuning
 *   **Rootcheck Exclusion (Alert 510):** Whitelist dell'interfaccia di rete in modalità promiscua per eliminare i falsi positivi legati all'attività legittima dell'IDS.
