@@ -22,6 +22,7 @@ Esplora le sezioni dettagliate per approfondire la configurazione:
 
 ### Blue Team Ops
 * **Active Response (Progetto Yamamoto):** Implementazione del blocco automatico degli IP malevoli tramite Wazuh + Netsh. 
+* **Threat Intelligence:** Integrazione con VirusTotal API per l'arricchimento automatico degli alert e la classificazione immediata di file malevoli.
 * **Thermal & Resource Tuning:** Ottimizzazione del kernel Linux per stabilizzare il server HP (da 80°C a 49°C).
 * **FIM (File Integrity Monitoring):** Analisi in tempo reale delle modifiche ai file critici di sistema.
 * **Detection Engineering:** Creazione di regole custom su Wazuh (Livello 12) per il monitoraggio avanzato (Auditing) degli accessi negati a partizioni isolate.

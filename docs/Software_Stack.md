@@ -6,6 +6,7 @@ La selezione dei software segue il principio di "Minima Superficie d'Attacco", p
 *   **Wazuh:** SIEM/XDR per l'analisi centralizzata dei log e integrità del sistema.
 *   **Suricata:** NIDS per l'analisi del traffico di rete in tempo reale.
 *   **Sysmon (SwiftOnSecurity config):** Monitoraggio avanzato dei processi Windows.
+*   **VirusTotal API Integration:** Configurazione automatizzata dell'intelligence di minaccia esterna.
 *   **Wireshark & Npcap:** Analisi profonda dei pacchetti e troubleshooting di rete.
 *   **KeePassXC:** Gestione password offline con crittografia AES-256.
 

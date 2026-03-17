@@ -13,6 +13,7 @@ Il laboratorio è in costante evoluzione. Lo sviluppo è strutturato per macro-a
 - [x] Endpoint Hardening tramite Sysmon (SwiftOnSecurity) e auditing avanzato di Windows.
 - [x] Scrittura regole custom su Wazuh (es. Alert Livello 12 per accessi negati a partizioni isolate).
 - [x] Operational Tuning: Ottimizzazione termica server HP e soppressione falsi positivi per evitare Alert Fatigue.
+- [x] Threat Intelligence: Integrazione API VirusTotal per il file hashing e analisi reputazione.
 
 ### Vulnerability Research & Red Team (In corso)
 - [x] Analisi manuale Web App in ambiente di staging tramite Burp Suite e Postman.
