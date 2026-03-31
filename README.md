@@ -34,13 +34,13 @@ Esplora le sezioni dettagliate per approfondire la configurazione:
 
 ---
 **Autore:** [Andrea Mannoia]  
-**Ruolo:** Junior SOC Analyst / Pentester in training
+**Ruolo:** Junior System Administrator & Cybersecurity Analyst
 ---
 
 ---
 
 ## Nota Personale
-Questo laboratorio non è solo una collezione di strumenti, ma il diario della mia transizione professionale verso la Cybersecurity. 
+Questo laboratorio non è solo una collezione di strumenti, ma il diario della mia transizione professionale verso la Cybersecurity e l'amministrazione di sistemi. 
 
 Ho costruito questa infrastruttura partendo da zero, affrontando sfide reali come l'ottimizzazione termica di hardware legacy e la gestione di protocolli di rete complessi. Per accelerare il mio apprendimento e simulare un ambiente di lavoro moderno, ho utilizzato strumenti di IA Generativa come Mentore Senior virtuale, collaborando nella progettazione architettonica e nella stesura dei report tecnici. 
 
