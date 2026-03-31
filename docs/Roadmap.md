@@ -35,13 +35,14 @@ Qui tengo traccia del mio studio quotidiano.
 
 | Corso / Certificazione | Piattaforma | Status | Progresso |
 | :--- | :--- | :--- | :--- |
+| **Microsoft Certified: Azure Fundamentals (AZ-900)** | Microsoft | **Completato** | [==========] 100% |
 | **Cybersecurity Technician** | Time Vision Srl | In corso | [=======>--] 70% |
 | **ISC2 CC (Certified in Cybersecurity)** | ISC2 | Candidato | [----------] 0% |
 | **SOC Level 1 Path** | TryHackMe | In corso | [==>-------] 15% |
 | **Splunk Fundamentals** | TryHackMe | In corso | [=---------] 10% |
 | **DevSecOps Path** | TryHackMe | In corso | [==>-------] 15% |
 | **Cybersecurity Fundamentals** | IBM SkillsBuild | In corso | [===>------] 25% |
-| **Python Fundamentals** | NetworkChuck/Self | Completato | [==========] 100% |
+| **Python Fundamentals** | NetworkChuck/Self | **Completato** | [==========] 100% |
 
 ---
 *Legenda: [=] = 10% di completamento.*
